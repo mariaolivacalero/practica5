@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            href="https://i.pinimg.com/originals/c0/ac/01/c0ac01013bb0c0c840c9a176bf735f13.png"
+        />
+        <title>USA</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+            href="/docs/5.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://kit.fontawesome.com/a940c621bb.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            .container-fluid-pagination {
+                padding: 30px;
+            }
+            .pagination a {
+                margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+            }
+            .texto {
+                font-family: "courier-prime", monospace;
+                font-size: 1em;
+            }
+            .pagination a.active {
+                background-color: #e4181b;
+                color: white;
+            }
+            .pagination a {
+                transition: background-color 0.3s;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+            .page-link {
+                font-family: "courier-prime", monospace;
+                color: black;
+            }
+            .pagination a:last-child {
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            .btn {
+                background-color: #e4181b;
+                font-family: "courier-prime", monospace;
+                color: white;
+            }
+            .body {
+                font-family: "courier-prime", monospace;
+            }
+
+            .footer {
+                font-family: "courier-prime", monospace;
+            }
+
+            #form {
+                font-family: "courier-prime", monospace;
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img
+                    src=https://1000marcas.net/wp-content/uploads/2020/11/Ed-Sheeran-logo.png
+                    alt="" width="100" height="75">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="music.html">Music</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle active"
+                                href="Tickets"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Tickets
+                            </a>
+                            <ul
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdownMenuLink"
+                            >
+                                <li>
+                                    <a class="dropdown-item" href="UK.html"
+                                        >UK</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="USA.html"
+                                        >USA</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="Europe.html"
+                                        >Europe</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container-fluid-pagination" id="background-head">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="UK.html" tabindex="-1"
+                                >Previous</a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="UK.html">UK</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="USA.html">USA</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="Europe.html">Europe</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="Europe.html">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="conteiner-fluid">
+                <div class="texto">
+                    <center>
+                        <p>No shows scheduled. Check again later</p>
+                    </center>
+                </div>
+                <center>
+                    <div
+                        class="w-50 p-3"
+                        id="form"
+                        style="background-color: #eee"
+                    >
+                        <div class="border border-light p-5">
+                            <p>
+                                Don't see your date above? Follow and Subscribe
+                                to be one of the first to know when Ed is coming
+                                to your area!
+                            </p>
+
+                            <input
+                                type="name"
+                                id="inputNombre"
+                                class="form-control mb-4"
+                                placeholder="Name"
+                            />
+
+                            <input
+                                type="email"
+                                id="inputMail"
+                                class="form-control mb-4"
+                                placeholder="E-mail"
+                            />
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input
+                                            type="checkbox"
+                                            class="custom-control-input"
+                                            id="inputAccept"
+                                        />
+                                        <label
+                                            class="custom-control-label"
+                                            for="inputAccept"
+                                            >I accept to receive commercial
+                                            information about tour dates</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="btn btn-info btn-block my-4"
+                                type="submit"
+                                onclick="getDatos()"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </main>
+    </body>
+    <footer class="text-center text-lg-start" style="background-color: #e4181b">
+        <div class="container d-flex justify-content-center py-5">
+            <button
+                type="button"
+                class="btn btn-primary btn-lg btn-floating mx-2"
+                onclick="location.href='https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V';"
+                style="background-color: #000000"
+            >
+                <i class="fa-brands fa-spotify"></i>
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary btn-lg btn-floating mx-2"
+                onclick="location.href='https://www.youtube.com/channel/UC0C-w0YjGpqDXGB8IHb662A';"
+                style="background-color: #000000"
+            >
+                <i class="fab fa-youtube"></i>
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary btn-lg btn-floating mx-2"
+                onclick="location.href='https://www.instagram.com/teddysphotos/?hl=es';"
+                style="background-color: #000000"
+            >
+                <i class="fab fa-instagram"></i>
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary btn-lg btn-floating mx-2"
+                onclick="location.href='https://twitter.com/edsheeran?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor';"
+                style="background-color: #000000"
+            >
+                <i class="fab fa-twitter"></i>
+            </button>
+        </div>
+        <p></p>
+
+        <!-- Copyright -->
+        <div
+            class="text-center text-white p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+            © 2022 Copyright:
+            <p class="text-white">María Oliva</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script>
+        const getDatos = async () => {
+            let inputNombre = document.getElementById("inputNombre").value;
+            let inputMail = document.getElementById("inputMail").value;
+
+            if (!inputMail.includes("@")) {
+                alert("You must provide a valid e-mail");
+                return false;
+            } else {
+                if ($("#inputAccept").is(":checked")) {
+                    alert("You have been succesfully added to the mail list.");
+                } else {
+                    alert("You must agree to the terms first.");
+                    return false;
+                }
+            }
+
+            let request = await fetch("/controlador", {
+                method: "POST",
+                credentials: "same-origin",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    nombre: inputNombre,
+                    mail: inputMail,
+                }),
+                dataType: "json",
+            });
+
+            if (request.ok) {
+                console.log(await request.json());
+            }
+        };
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+    ></script>
+</html>
